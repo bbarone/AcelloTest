@@ -24,6 +24,7 @@
 			var beta = 0;
 			var gamma = 0;
 			
+			var step = Math.sqrt(ax*ax+ay*ay+az*az);
 			
 			if (window.DeviceMotionEvent==undefined) {
 				document.getElementById("no").style.display="block";
@@ -50,10 +51,10 @@
 				}
  
 				setInterval(function() {
-					if (ax > 0 || ay > 5) {
+					if (step > 60) {
 						document.getElementById("xlabel").innerHTML = "Hello!";
 					}
-					if (ax==0 || ay==0 || ax==10) {
+					if (step <= 60) {
 						document.getElementById("xlabel").innerHTML = "Bye!";
 					}
 				}, delay);
