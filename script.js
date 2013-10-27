@@ -51,12 +51,12 @@
 				}
 
 				setInterval(function() {
-					if (Math.sqrt((ax*ax)+(ay*ay)+(az*az)) > 11) {
+					if (Math.sqrt((ax*ax)+(ay*ay)+(az*az)) > 10.4) {
 						document.getElementById("xlabel").innerHTML = "Hello!";
 						document.getElementById("show").innerHTML = "Number: " + Math.sqrt((ax*ax)+(ay*ay)+(az*az));
 						document.getElementById("display").innerHTML = "Steps: " + ++steps;
 					}
-					if (Math.sqrt((ax*ax)+(ay*ay)+(az*az)) <= 11) {
+					if (Math.sqrt((ax*ax)+(ay*ay)+(az*az)) <= 10.4) {
 						document.getElementById("xlabel").innerHTML = "Bye!";
 						document.getElementById("show").innerHTML = "Number: " + Math.sqrt((ax*ax)+(ay*ay)+(az*az));
 					}
