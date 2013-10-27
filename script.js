@@ -58,5 +58,5 @@
 					if (Math.sqrt((ax*ax)+(ay*ay)+(az*az)) <= 10) {
 						document.getElementById("xlabel").innerHTML = "Bye!";
 					}
-				}, 200);
+				}, 500);
 			} 
