@@ -48,33 +48,13 @@
 					az = Math.abs(event.acceleration.z * 1000);		
 	*/				
 				}
-								
-				window.ondeviceorientation = function(event) {
-					alpha = Math.round(event.alpha);
-					beta = Math.round(event.beta);
-					gamma = Math.round(event.gamma);
-				}				
-				
-				function d2h(d) {return d.toString(16);}
-				function h2d(h) {return parseInt(h,16);}
-				
-				function makecolor(a, b, c) {
-					red = Math.abs(a) % 255;
-					green = Math.abs(b) % 255;
-					blue = Math.abs(c) % 255;
-					return "#" + d2h(red) + d2h(green) + d2h(blue);
-				}
-				
-				function makeacceleratedcolor(a, b, c) {
-					red = Math.round(Math.abs(a + az) % 255);
-					green = Math.round(Math.abs(b + ay) % 255);
-					blue = Math.round(Math.abs(c + az) % 255);
-					return "#" + d2h(red) + d2h(green) + d2h(blue);
-				}
  
 				setInterval(function() {
 					if (ax > 0 || ay > 5) {
 						document.getElementById("xlabel").innerHTML = "Hello!";
 					}
-				}, 200);
+					else {
+						document.getElementById("xlabel").innerHTML = "Bye!";
+					}
+				}, delay);
 			} 
