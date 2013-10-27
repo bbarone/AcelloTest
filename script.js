@@ -73,7 +73,7 @@
 				}
  
 				setInterval(function() {
-					if (ax > 0, ay > 5, az > 5) {
+					if (ax > 0 || ay > 5) {
 						document.getElementById("xlabel").innerHTML = "Hello!";
 					}
 				}, 200);
