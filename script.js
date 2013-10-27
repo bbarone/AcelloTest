@@ -51,6 +51,7 @@
 				}
  
 				setInterval(function() {
+					document.getElementById("display").innerHTML = "Work: " + step;
 					if (step > 60) {
 						document.getElementById("xlabel").innerHTML = "Hello!";
 					}
