@@ -47,16 +47,15 @@
 					az = Math.abs(event.acceleration.z * 1000);		
 	*/				
 				}
- 
- 			var step = Math.sqrt((ax*ax)+(ay*ay)+(az*az));
 
 				setInterval(function() {
-					document.getElementById("display").innerHTML = "Work: " + step;
-					if (step > 60) {
+					if (Math.sqrt((ax*ax)+(ay*ay)+(az*az)) > 60) {
 						document.getElementById("xlabel").innerHTML = "Hello!";
+						document.getElementById("display").innerHTML = "Work: " + Math.sqrt((ax*ax)+(ay*ay)+(az*az));
 					}
-					if (step <= 60) {
+					if (Math.sqrt((ax*ax)+(ay*ay)+(az*az)) <= 60) {
 						document.getElementById("xlabel").innerHTML = "Bye!";
+						document.getElementById("display").innerHTML = "Work: " + Math.sqrt((ax*ax)+(ay*ay)+(az*az));
 					}
 				}, delay);
 			} 
