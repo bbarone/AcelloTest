@@ -53,10 +53,12 @@
 				setInterval(function() {
 					if (Math.sqrt((ax*ax)+(ay*ay)+(az*az)) > 10) {
 						document.getElementById("xlabel").innerHTML = "Hello!";
-						document.getElementById("display").innerHTML = "Work: " + ++steps;
+						document.getElementById("show").innerHTML = "Number: " + Math.sqrt((ax*ax)+(ay*ay)+(az*az));
+						document.getElementById("display").innerHTML = "Steps: " + ++steps;
 					}
 					if (Math.sqrt((ax*ax)+(ay*ay)+(az*az)) <= 10) {
 						document.getElementById("xlabel").innerHTML = "Bye!";
+						document.getElementById("show").innerHTML = "Steps: " + Math.sqrt((ax*ax)+(ay*ay)+(az*az));
 					}
 				}, 500);
 			} 
