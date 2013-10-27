@@ -23,6 +23,8 @@
 			var alpha = 0;
 			var beta = 0;
 			var gamma = 0;
+
+			var steps = 0;
 			
 			if (window.DeviceMotionEvent==undefined) {
 				document.getElementById("no").style.display="block";
@@ -49,13 +51,13 @@
 				}
 
 				setInterval(function() {
-					if (Math.sqrt((ax*ax)+(ay*ay)+(az*az)) > 60) {
+					if (Math.sqrt((ax*ax)+(ay*ay)+(az*az)) > 10) {
 						document.getElementById("xlabel").innerHTML = "Hello!";
-						document.getElementById("display").innerHTML = "Work: " + Math.sqrt((ax*ax)+(ay*ay)+(az*az));
+						steps += 1;
+						document.getElementById("display").innerHTML = "Work: " steps;
 					}
-					if (Math.sqrt((ax*ax)+(ay*ay)+(az*az)) <= 60) {
+					if (Math.sqrt((ax*ax)+(ay*ay)+(az*az)) <= 10) {
 						document.getElementById("xlabel").innerHTML = "Bye!";
-						document.getElementById("display").innerHTML = "Work: " + Math.sqrt((ax*ax)+(ay*ay)+(az*az));
 					}
 				}, delay);
 			} 
