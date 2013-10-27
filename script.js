@@ -32,9 +32,9 @@
 			} 
 			else {
 				window.ondevicemotion = function(event) {
-					ax = Math.round(event.accelerationIncludingGravity.x * 1));
-					ay = Math.round(event.accelerationIncludingGravity.y * 1));
-					az = Math.round(event.accelerationIncludingGravity.z * 1));		
+					ax = Math.round(event.accelerationIncludingGravity.x * 1);
+					ay = Math.round(event.accelerationIncludingGravity.y * 1);
+					az = Math.round(event.accelerationIncludingGravity.z * 1);		
 					ai = Math.round(event.interval * 100) / 100;
 					rR = event.rotationRate;
 					if (rR != null) {
@@ -58,5 +58,5 @@
 					if (Math.sqrt((ax*ax)+(ay*ay)+(az*az)) <= 10) {
 						document.getElementById("xlabel").innerHTML = "Bye!";
 					}
-				}, delay);
+				}, 200);
 			} 
