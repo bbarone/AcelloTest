@@ -53,7 +53,7 @@
 					if (ax > 0 || ay > 5) {
 						document.getElementById("xlabel").innerHTML = "Hello!";
 					}
-					else {
+					if (ax==0 || ay==0 || ax==10) {
 						document.getElementById("xlabel").innerHTML = "Bye!";
 					}
 				}, delay);
