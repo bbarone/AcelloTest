@@ -24,8 +24,6 @@
 			var beta = 0;
 			var gamma = 0;
 			
-			var step = Math.sqrt(ax*ax+ay*ay+az*az);
-			
 			if (window.DeviceMotionEvent==undefined) {
 				document.getElementById("no").style.display="block";
 				document.getElementById("yes").style.display="none";
@@ -50,6 +48,8 @@
 	*/				
 				}
  
+ 			var step = Math.sqrt((ax*ax)+(ay*ay)+(az*az));
+
 				setInterval(function() {
 					document.getElementById("display").innerHTML = "Work: " + step;
 					if (step > 60) {
