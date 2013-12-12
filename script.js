@@ -23,7 +23,8 @@
 			var alpha = 0;
 			var beta = 0;
 			var gamma = 0;
-			
+
+			var steps = 0;
 			
 			if (window.DeviceMotionEvent==undefined) {
 				document.getElementById("no").style.display="block";
@@ -31,9 +32,9 @@
 			} 
 			else {
 				window.ondevicemotion = function(event) {
-					ax = Math.round(Math.abs(event.accelerationIncludingGravity.x * 1));
-					ay = Math.round(Math.abs(event.accelerationIncludingGravity.y * 1));
-					az = Math.round(Math.abs(event.accelerationIncludingGravity.z * 1));		
+					ax = Math.round(event.accelerationIncludingGravity.x * 1);
+					ay = Math.round(event.accelerationIncludingGravity.y * 1);
+					az = Math.round(event.accelerationIncludingGravity.z * 1);		
 					ai = Math.round(event.interval * 100) / 100;
 					rR = event.rotationRate;
 					if (rR != null) {
@@ -41,15 +42,16 @@
 						arBeta = Math.round(rR.beta);
 						arGamma = Math.round(rR.gamma);
 					}
+
 				}
  
 				setInterval(function() {
-					if (ax > 0 || ay > 5) {
+					if (Math.sqrt((ax*ax)+(ay*ay)+(az*az)) > 10.6) {
 						document.getElementById("WalkHide").style.display="none !important";
 						document.getElementById("WalkShow").style.display="block !important";
 					}
 				}
-					else {
+					if (Math.sqrt((ax*ax)+(ay*ay)+(az*az)) <= 10.6) {
 						document.getElementById("WalkHide").style.display="block !important";
 						document.getElementById("WalkShow").style.display="none !important";
 					}, 200);
