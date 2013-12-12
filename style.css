@@ -1,16 +1,8 @@
 
-#NoWalkShow {
-	display: block;
+.Hidden {
+	display: none !important;
 }
 
-#WalkHide {
-	display: block;
-}
-
-#NoWalkHide {
-	display: none;
-}
-
-#WalkShow {
-	display: none;
+.Show {
+	display: block !important;
 }
