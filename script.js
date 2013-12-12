@@ -49,8 +49,4 @@
 						document.getElementsByClassName("NoWalkHide").className += " WalkShow";
 					}
 				}, 200);
-					else {
-						document.getElementsByClassName("NoWalkHide").className += " WalkShow";
-						document.getElementsByClassName("NoWalkShow").className += " WalkHide";
-					}
 			} 
