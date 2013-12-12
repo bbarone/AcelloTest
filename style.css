@@ -1,16 +1,16 @@
 
-.NoWalkShow {
+#NoWalkShow {
 	display: block;
 }
 
 .WalkHide {
-	display: none;
+	display: none !important;
 }
 
-.NoWalkHide {
+#NoWalkHide {
 	display: none;
 }
 
 .WalkShow {
-	display: block;
+	display: block !important;
 }

@@ -45,8 +45,8 @@
  
 				setInterval(function() {
 					if (ax > 0 || ay > 5) {
-						document.getElementsByClassName("NoWalkShow").className += " WalkHide";
-						document.getElementsByClassName("NoWalkHide").className += " WalkShow";
+						document.getElementById("NoWalkShow").className += " WalkHide";
+						document.getElementById("NoWalkHide").className += " WalkShow";
 					}
 				}, 200);
 			} 
