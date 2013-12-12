@@ -3,14 +3,14 @@
 	display: block;
 }
 
-.WalkHide {
-	display: none !important;
+#WalkHide {
+	display: block;
 }
 
 #NoWalkHide {
 	display: none;
 }
 
-.WalkShow {
-	display: block !important;
+#WalkShow {
+	display: none;
 }

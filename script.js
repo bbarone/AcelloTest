@@ -45,12 +45,12 @@
  
 				setInterval(function() {
 					if (ax > 0 || ay > 5) {
-						document.getElementById("WalkHide").style.display="none";
-						document.getElementById("WalkShow").style.display="block";
+						document.getElementById("WalkHide").style.display="none !important";
+						document.getElementById("WalkShow").style.display="block !important";
 					}
 				}
 					else {
-						document.getElementById("WalkHide").style.display="block";
-						document.getElementById("WalkShow").style.display="none";
+						document.getElementById("WalkHide").style.display="block !important";
+						document.getElementById("WalkShow").style.display="none !important";
 					}, 200);
 			} 
