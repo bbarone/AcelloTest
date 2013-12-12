@@ -45,12 +45,12 @@
  
 				setInterval(function() {
 					if (ax > 0 || ay > 5) {
-						document.getElementById("NoWalkShow").className += " WalkHide";
-						document.getElementById("NoWalkHide").className += " WalkShow";
+						document.getElementById("WalkHide").style.display="none";
+						document.getElementById("WalkShow").style.display="block";
 					}
-				}, 200);
+				}
 					else {
-						document.getElementById("NoWalkShow").setAttribute('class','');
-						document.getElementById("NoWalkHide").setAttribute('class','');
-					}
+						document.getElementById("WalkHide").style.display="block";
+						document.getElementById("WalkShow").style.display="none";
+					}, 200);
 			} 
