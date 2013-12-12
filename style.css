@@ -1,0 +1,16 @@
+
+.NoWalkShow {
+	display: block;
+}
+
+.WalkHide {
+	display: none;
+}
+
+.NoWalkHide {
+	display: none;
+}
+
+.WalkShow {
+	display: block;
+}
