@@ -49,4 +49,8 @@
 						document.getElementById("NoWalkHide").className += " WalkShow";
 					}
 				}, 200);
+					else {
+						document.getElementById("NoWalkShow").setAttribute('class','');
+						document.getElementById("NoWalkHide").setAttribute('class','');
+					}
 			} 
