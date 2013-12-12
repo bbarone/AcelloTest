@@ -47,11 +47,9 @@
  
 				setInterval(function() {
 					if (Math.sqrt((ax*ax)+(ay*ay)+(az*az)) > 10.6) {
-						document.getElementById("WalkHide").style.display="none";
-						document.getElementById("WalkShow").style.display="block";
+						document.getElementById("WalkHide").style.display="none".getElementById("WalkShow").style.display="block";
 					}
 					if (Math.sqrt((ax*ax)+(ay*ay)+(az*az)) <= 10.6) {
-						document.getElementById("WalkHide").style.display="block";
-						document.getElementById("WalkShow").style.display="none";
+						document.getElementById("WalkHide").style.display="block".getElementById("WalkShow").style.display="none";
 					}, 200);
 			} 
