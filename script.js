@@ -47,12 +47,12 @@
  
 				setInterval(function() {
 					if (Math.sqrt((ax*ax)+(ay*ay)+(az*az)) > 10.6) {
-						document.getElementById("WalkHide").style.display="none !important";
-						document.getElementById("WalkShow").style.display="block !important";
+						document.getElementById("WalkHide").style.display="none";
+						document.getElementById("WalkShow").style.display="block";
 					}
 				}
 					if (Math.sqrt((ax*ax)+(ay*ay)+(az*az)) <= 10.6) {
-						document.getElementById("WalkHide").style.display="block !important";
-						document.getElementById("WalkShow").style.display="none !important";
+						document.getElementById("WalkHide").style.display="block";
+						document.getElementById("WalkShow").style.display="none";
 					}, 200);
 			} 
