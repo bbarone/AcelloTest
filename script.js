@@ -47,18 +47,11 @@
  
 				setInterval(function() {
 					if (Math.sqrt((ax*ax)+(ay*ay)+(az*az)) > 10.6) {
-<<<<<<< HEAD
-						document.getElementById("WalkHide").style.display="none".getElementById("WalkShow").style.display="block";
-					}
-					if (Math.sqrt((ax*ax)+(ay*ay)+(az*az)) <= 10.6) {
-						document.getElementById("WalkHide").style.display="block".getElementById("WalkShow").style.display="none";
-=======
 						document.getElementById("WalkHide").className = "Hidden";
 						document.getElementById("WalkShow").className = "Show";
 					}
 					if (Math.sqrt((ax*ax)+(ay*ay)+(az*az)) <= 10.6) {
 						document.getElementById("WalkHide").className = "Show";
 						document.getElementById("WalkShow").className = "Hidden";
->>>>>>> Maybe
 					}, 200);
 			} 
